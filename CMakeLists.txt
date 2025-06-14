@@ -4,7 +4,7 @@ project(CalculatorProject)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(CalculatorProject
-        main.cpp
-        calculator.cpp
-        calculator.h
+        calculator/main.cpp
+        calculator/calculator.cpp
+        calculator/calculator.h
 )
