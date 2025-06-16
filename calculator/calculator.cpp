@@ -1,33 +1,18 @@
-#include "calculator.h"
 #include <iostream>
 #include <string>
 #include <cmath>
 
-enum class Operation {
-    Plus,
-    Minus,
-    Multiply,
-    Divide,
-    Quit,
-    Pow,
-    Set,
-    Clear,
-    Print,
-    Save,
-    Load
-};
+#include "calculator.h"
 
-bool ReadNumber(Number& number);
-bool ReadOperation(Operation& operation);
 
 bool RunCalculatorCycle() {
-    if (Number number; !ReadNumber(number)) {
+    if (Number number = 0; !ReadNumber(number)) {
         return false;
     } else {
         Number result = 0;
-        Number memory_cell;
+        Number memory_cell = 0;
         bool memory_set = false; // флаг по которому будем определять была ли загрузка в ячейку памяти хоть раз
-        Operation operation;
+        Operation operation = Operation::Quit;
         result = number;
 
         while(true) {
